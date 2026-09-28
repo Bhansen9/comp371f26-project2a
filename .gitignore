@@ -1,0 +1,29 @@
+# sbt and Scala build output
+target/
+project/target/
+project/project/
+*.class
+*.jar
+*.tasty
+
+# IDE metadata
+.bsp/
+.bloop/
+.metals/
+.scala-build/
+.idea/
+.vscode/
+*.iml
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Local and temporary files
+*.log
+*.swp
+*.swo
+*~
+.env
+.env.*
+!.env.example
