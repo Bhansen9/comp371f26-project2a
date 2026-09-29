@@ -1,0 +1,83 @@
+Student: Ben-Hansen
+
+================================================================================
+GRADING REPORT — COMP 371 PROJECT 2A
+================================================================================
+
+### 1. Project Structure — 0.35 / 0.50
+
+Evidence:
+* Source code in src/main/scala/edu/luc/cs/consoleapp/Main.scala, build.sbt, .gitignore
+
+Deductions:
+* (-0.10) Requirement: Project documentation. Missing root README.md.
+* (-0.05) Requirement: CI workflow. Missing .github/workflows directory.
+
+Points Awarded: 0.35 / 0.50
+
+### 2. Correctness — 1.00 / 1.00
+
+Evidence:
+* sbt test: PASS (compilation clean)
+* sbt stage: PASS (generated target/universal/stage/bin/main)
+* Empty input: exits 0 with no output
+* Nonempty input: produces correct output
+* Argument handling: exits 2 on multiple args, exits 4 on invalid args
+
+Deductions:
+* None
+
+Points Awarded: 1.00 / 1.00
+
+### 3. Scalability — 0.50 / 0.50
+
+Evidence:
+* Decoupled processWords helper taking onUpdate: CircularFifoQueue[String] => Unit
+* Streaming test verified constant memory
+* Screenshots in src/main confirm constant resident memory (94M RES) across ~9 minutes of execution
+
+Deductions:
+* None
+
+Points Awarded: 0.50 / 0.50
+
+### 4. Manual Testing — 0.50 / 0.50
+
+Evidence:
+* doc/empty-input.png, doc/nonempty-input.png, and two htop screenshots provided
+
+Deductions:
+* None
+
+Points Awarded: 0.50 / 0.50
+
+### 5. AI Disclosure / Affidavit — 0.10 / 0.50
+
+Evidence:
+* src/main/Ai_Transcript.md contains only one unfinished sentence: 'Used AI to set up the S'
+
+Deductions:
+* (-0.40) Requirement: AI disclosure. Provided an unfinished fragment without description of tools, prompt logs, or verification.
+
+Points Awarded: 0.10 / 0.50
+
+### Extra Credit — +0.00 / 0.50
+
+Evidence:
+* No unit test files provided
+
+Points Awarded: +0.00 / 0.50
+
+================================================================================
+FINAL SCORE
+================================================================================
+Base Score:   2.45 / 3.00
+Extra Credit: +0.00 / 0.50
+Total Score:  2.45 / 3.00
+
+--------------------------------------------------------------------------------
+STUDENT-FACING FEEDBACK
+--------------------------------------------------------------------------------
+Your console application works correctly and incorporates callback-based stream processing with processWords. Your staged executable passed all functional checks, argument validations, and scalability runs.
+
+To improve your score, ensure you provide a complete AI disclosure document (the file submitted contained only an unfinished sentence), include a root README.md and GitHub Actions CI workflow, and implement automated unit tests for the sliding queue to earn extra credit.
